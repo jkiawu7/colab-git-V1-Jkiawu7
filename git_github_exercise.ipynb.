@@ -1,0 +1,212 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "mount_file_id": "1Gse_w8J6-2NppI9tT0-3lVRRu8h4WXs-",
+      "authorship_tag": "ABX9TyMYhq20P/S+RHylt6w8ntIm",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/jkiawu7/colab-git-V1-Jkiawu7/blob/main/git_github_exercise.ipynb.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dae8VNY6815K",
+        "outputId": "f3615fab-844d-4714-8240-71afbde4df38"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Reading package lists... Done\n",
+            "Building dependency tree... Done\n",
+            "Reading state information... Done\n",
+            "git is already the newest version (1:2.34.1-1ubuntu1.15).\n",
+            "0 upgraded, 0 newly installed, 0 to remove and 41 not upgraded.\n"
+          ]
+        }
+      ],
+      "source": [
+        "!apt-get install -y git\n",
+        "!git config --global user.email\"jameskiawu7@gmail.com\"\n",
+        "!git config --global user.name\"Jkiawu7\""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git clone https://github.com/Jkiawu7/colab-git-V1-Jkiawu7.git\n",
+        "%cd colab-git-V1-Jkiawu7\n",
+        "!ls"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uP12trz-Bz0v",
+        "outputId": "ee14f7fa-ca03-4090-f438-ee2f555dcc73"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Cloning into 'colab-git-V1-Jkiawu7'...\n",
+            "remote: Enumerating objects: 3, done.\u001b[K\n",
+            "remote: Counting objects: 100% (3/3), done.\u001b[K\n",
+            "remote: Compressing objects: 100% (2/2), done.\u001b[K\n",
+            "remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)\u001b[K\n",
+            "Receiving objects: 100% (3/3), done.\n",
+            "/content/colab-git-V1-Jkiawu7\n",
+            "README.md\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git status"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UunszmG-Fy8j",
+        "outputId": "83a66388-060d-4254-b924-611f3742e051"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "On branch main\n",
+            "Your branch is up to date with 'origin/main'.\n",
+            "\n",
+            "nothing to commit, working tree clean\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Git and GitHub Exercise  \n",
+        "This notebook demonstrates basic Git operations."
+      ],
+      "metadata": {
+        "id": "3POrdbzMIpda"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def greet(name):\n",
+        "    return f\"Hello, {name}! Welcome to Git and GitHub.\"\n",
+        "print(greet(\"Learner\"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3EJ-Rn2CIuAl",
+        "outputId": "958ad655-91e1-446f-fb13-8dac7e1a0119"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello, Learner! Welcome to Git and GitHub.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git branch -m main"
+      ],
+      "metadata": {
+        "id": "93Gz8YZMKFFp"
+      },
+      "execution_count": 6,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git branch"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Mck91twRKLxi",
+        "outputId": "bf9f733a-3eba-4753-8c1b-4e720af2ac6d"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "* \u001b[32mmain\u001b[m\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git config --global init.defaultBranch main"
+      ],
+      "metadata": {
+        "id": "RDE84yaxKSMP"
+      },
+      "execution_count": 22,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git add git_github_exercise.ipynb\n",
+        "!git commit -m \"Add initial notebook with greeting function\"\n",
+        "!git remote add origin https://github.com/<your_username>/<your_repository>.git\n",
+        "!git push origin"
+      ],
+      "metadata": {
+        "id": "JU5S_1SqPtkr"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
